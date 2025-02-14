@@ -1,0 +1,352 @@
+/* 🌸 Style global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(to bottom, #ff758c, #ff7eb3, #ff9eb5);
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📌 Conteneur principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  padding: 20px;
+}
+
+/* ❤️ Cœurs flottants */
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.8;
+  animation: floating 8s infinite linear;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* 💌 Message romantique */
+.love-message {
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  border-radius: 20px;
+  font-size: 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.love-message:hover {
+  transform: scale(1.05);
+}
+
+.love-message h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  white-space: nowrap;
+  color: white;
+}
+
+.emoji {
+  font-size: 2.8rem;
+  filter: drop-shadow(2px 2px 5px rgba(255, 255, 255, 0.6));
+}
+
+.love-message p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.9;
+  font-style: italic;
+}
+
+/* 💝 Style du bouton magique */
+.magic-button {
+  margin-top: 20px;
+}
+
+.magic-button button {
+  padding: 20px 40px;
+  font-size: 1.5rem;
+  background-color: #ff0055;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.magic-button button:hover {
+  background-color: #d40045;
+  transform: scale(1.05);
+}
+
+/* 🎇 Feu d'artifice */
+.fireworks-container {
+  margin-top: 30px;
+}
+
+.fireworks-container button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: #ff0055;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+
+.fireworks-container button:hover {
+  background-color: #d40045;
+}
+
+.revealedmessage {
+  background: none !important;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff69b4;
+  text-shadow: 2px 2px 5px rgba(255, 105, 180, 0.5);
+  text-align: center;
+  padding: 10px;
+}
+
+.revealed-message h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #fff4b0, #ffdb58, #ffeaa7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.revealed-message p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.lottie-container {
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* 📱 Media Queries pour Tablette */
+@media screen and (max-width: 768px) {
+  .love-message {
+    padding: 30px;
+    width: 95%;
+  }
+
+  .love-message h1 {
+    font-size: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .emoji {
+    font-size: 2.2rem;
+  }
+
+  .love-message p {
+    font-size: 1.2rem;
+  }
+
+  .magic-button button,
+  .fireworks-container button {
+    padding: 15px 30px;
+    font-size: 1.3rem;
+  }
+
+  .revealed-message h2 {
+    font-size: 1.8rem;
+  }
+
+  .revealed-message p {
+    font-size: 1.2rem;
+  }
+
+  .lottie-container {
+    width: 250px;
+  }
+}
+
+/* 📱 Media Queries pour Mobile */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .love-message {
+    padding: 20px;
+    width: 98%;
+  }
+
+  .love-message h1 {
+    font-size: 1.6rem;
+    gap: 10px;
+  }
+
+  .emoji {
+    font-size: 1.8rem;
+  }
+
+  .love-message p {
+    font-size: 1rem;
+  }
+
+  .magic-button button,
+  .fireworks-container button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+  }
+
+  .revealedmessage {
+    font-size: 1.2rem;
+  }
+
+  .revealed-message h2 {
+    font-size: 1.5rem;
+  }
+
+  .revealed-message p {
+    font-size: 1rem;
+  }
+
+  .lottie-container {
+    width: 200px;
+  }
+
+  .heart {
+    font-size: 1.5rem;
+  }
+
+  @keyframes floating {
+    0% {
+      transform: translateY(0) scale(0.6);
+      opacity: 0;
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px) scale(0.8);
+      opacity: 0;
+    }
+  }
+}
+
+/* 📱 Media Queries pour très petits écrans (moins de 300px) */
+@media screen and (max-width: 300px) {
+  .container {
+    padding: 10px;
+  }
+
+  .love-message {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .love-message h1 {
+    font-size: 1.2rem;
+    gap: 5px;
+  }
+
+  .emoji {
+    font-size: 1.4rem;
+  }
+
+  .love-message p {
+    font-size: 0.9rem;
+    margin-top: 8px;
+  }
+
+  .magic-button {
+    margin-top: 15px;
+  }
+
+  .magic-button button,
+  .fireworks-container button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .revealedmessage {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  .revealed-message h2 {
+    font-size: 1.2rem;
+  }
+
+  .revealed-message p {
+    font-size: 0.9rem;
+  }
+
+  .lottie-container {
+    width: 150px;
+  }
+
+  .heart {
+    font-size: 1.2rem;
+  }
+
+  .love-message:hover {
+    transform: scale(1.02);
+  }
+}
